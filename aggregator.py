@@ -2,6 +2,8 @@ import requests
 import feedparser
 from jinja2 import Environment, FileSystemLoader
 from datetime import datetime, timezone
+import time
+from zoneinfo import ZoneInfo
 from operator import itemgetter
 import html
 from bs4 import BeautifulSoup
@@ -120,8 +122,8 @@ def aggregate_and_render(output_file='index.html'):
     # Render the template with the combined data
     html_output = template.render(
         news_items=all_news,
-        generated_at=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
-    )
+        generated_at=datetime.now(tz=ZoneInfo("Australia/Sydney")
+    ))
 
     # Save the HTML file to the specified location
     with open(output_file, 'w', encoding='utf-8') as f:
