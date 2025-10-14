@@ -1,2 +1,3 @@
 # Simple-News-Aggregator-Site
-Small project to combine multiple news sources into a simple static site.
+
+This was a quick project to host a static website with some news sources so I can avoid wasting hours scrolling news/social media without missing out.
