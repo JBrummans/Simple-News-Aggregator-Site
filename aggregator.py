@@ -30,7 +30,7 @@ def fetch_hacker_news(limit=15):
                     'source': 'Hacker News',
                     'title': story['title'],
                     'link': story['url'],
-                    'description': f"{story.get('score', 0)} points, by {story.get('by', 'anon')}",
+                    #'description': f"{story.get('score', 0)} points, by {story.get('by', 'anon')}",
                     'time_posted': post_time,
                     'display_time': post_time.strftime('%Y-%m-%d %H:%M:%S UTC')
                 })
