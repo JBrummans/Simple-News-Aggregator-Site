@@ -5,6 +5,7 @@ from datetime import datetime, timezone
 from operator import itemgetter
 import html
 from bs4 import BeautifulSoup
+import argparse
 
 # --- 1. Data Retrieval Functions ---
 
@@ -86,7 +87,7 @@ def fetch_rss_feed(url, source_name, limit=15):
                 'source': source_name,
                 'title': post_title,
                 'link': getattr(entry, 'link', '#'),
-                # 'description': description, # <-- Now clean of image tags
+                # 'description': description,
                 'time_posted': post_time,
                 'display_time': post_time.strftime('%Y-%m-%d %H:%M:%S UTC')
             })
@@ -96,7 +97,7 @@ def fetch_rss_feed(url, source_name, limit=15):
         
     return feed_data
 
-def aggregate_and_render():
+def aggregate_and_render(output_file='index.html'):
     """Combines all feeds, sorts, and generates the HTML output."""
     all_news = []
 
@@ -112,7 +113,8 @@ def aggregate_and_render():
     all_news.sort(key=itemgetter('time_posted'), reverse=True)
 
     # Setup Jinja2 environment and load template
-    env = Environment(loader=FileSystemLoader('.')) # Looks for template in the current directory
+    # Note: Jinja2 looks for the template relative to the script's execution, which is fine here.
+    env = Environment(loader=FileSystemLoader('.')) 
     template = env.get_template('template.html')
 
     # Render the template with the combined data
@@ -121,11 +123,22 @@ def aggregate_and_render():
         generated_at=datetime.now(timezone.utc).strftime('%Y-%m-%d %H:%M:%S UTC')
     )
 
-    # Save the HTML file
-    with open('index.html', 'w', encoding='utf-8') as f:
+    # Save the HTML file to the specified location
+    with open(output_file, 'w', encoding='utf-8') as f:
         f.write(html_output)
 
-    print("Successfully generated index.html")
+    print(f"Successfully generated HTML file at: {output_file}")
 
 if __name__ == '__main__':
-    aggregate_and_render()
+    # Setup argument parser
+    parser = argparse.ArgumentParser(description="A Python script to aggregate news feeds and generate a static HTML file.")
+    parser.add_argument(
+        '--output-file',
+        type=str,
+        default='index.html',
+        help="The path and filename for the output HTML file. Default is 'index.html'."
+    )
+    args = parser.parse_args()
+    
+    # Pass the argument to the main function
+    aggregate_and_render(output_file=args.output_file)
