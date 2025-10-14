@@ -1,0 +1,885 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SNAS</title>
+    <style>
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; margin: 20px; background-color: #f6f6ef; }
+        .container { max-width: 800px; margin: 0 auto; background-color: #ffffff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); }
+        h1 { color: #ff6600; border-bottom: 2px solid #ff6600; padding-bottom: 5px; }
+        .item { margin-bottom: 20px; padding: 10px; border: 1px solid #ccc; border-radius: 5px; background-color: #fff; }
+        .item-header a { font-size: 1.2em; font-weight: bold; color: #000000; text-decoration: none; }
+        .item-meta { font-size: 0.85em; color: #555; margin-top: 5px; }
+        .source { color: #ff6600; font-weight: bold; }
+        .item-description { margin-top: 5px; font-size: 0.9em; color: #333; }
+        .footer { margin-top: 30px; padding-top: 10px; border-top: 1px solid #ccc; font-size: 0.75em; text-align: center; color: #777; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Simple News Aggregator Site</h1>
+        
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/dave-hughes-hospital-again-afl-legends-game/105888798" target="_blank">Dave Hughes in hospital again six weeks after AFL Legends game</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-14 01:30:08 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/australia-call-up-josh-philippe-and-matt-kuhnemann/105888558" target="_blank">Philippe, Kuhnemann in for ODI with Inglis injured</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-14 01:07:17 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://arstechnica.com/security/2025/10/no-fix-yet-for-attack-that-lets-hackers-pluck-2fa-codes-from-android-phones/" target="_blank">Hackers can steal 2FA codes and private messages from Android phones</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 23:49:55 UTC</span>
+            </div>
+            
+            <p class="item-description">39 points, by sipofwater</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://krebsonsecurity.com/2025/10/ddos-botnet-aisuru-blankets-us-isps-in-record-ddos/" target="_blank">DDoS Botnet Aisuru Blankets US ISPs in Record DDoS</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 23:21:23 UTC</span>
+            </div>
+            
+            <p class="item-description">56 points, by JumpCrisscross</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://retrohax.net/sony-playstation-2-fixing-frenzy/" target="_blank">Sony PlayStation 2 fixing frenzy</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 23:02:06 UTC</span>
+            </div>
+            
+            <p class="item-description">41 points, by ibobev</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://github.com/leahneukirchen/nitro" target="_blank">nitro: tiny but flexible init system and process supervisor</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 22:38:51 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/alexei-popyrin-defeated-in-atp-tour-stockholm-open/105887672" target="_blank">Popyrin defeated in ATP Tour return after two-month back injury layoff</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 22:29:24 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5y9q8/nasas_jet_propulsion_laboratory_to_lay_off_about/" target="_blank">NASA's Jet Propulsion Laboratory to lay off about 550 workers</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 22:24:50 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5xvg9/i_built_a_simple_docker_backup_tool_feedback/" target="_blank">I built a simple Docker backup tool — feedback appreciated</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 22:08:44 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/afl-trade-period-day-seven-live-updates-merrett-curnow-petracca/105886172" target="_blank">Live: Pies and Lions shuffle picks as wheels begin to turn on Merrett and Curnow</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 21:47:28 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/six-nrl-players-named-in-england-rugby-league-ashes-sqaud/105887552" target="_blank">Six NRL players in England Ashes squad, no place for Man of Steel</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 21:16:29 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5vnic/does_anyone_else_feel_unorganized/" target="_blank">Does anyone else feel unorganized?</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 20:43:42 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://ktye.github.io/" target="_blank">zoo of array languages</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 20:09:29 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5udnq/looking_for_self_hosted_alternative_to_firestick/" target="_blank">Looking for self hosted alternative to Firestick</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 19:57:37 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/cape-verde-qualifies-for-2026-fifa-world-cup/105887380" target="_blank">World Cup qualifier stopped by runaway rat, Cape Verde makes history</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 19:47:16 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://blog.burkert.me/posts/llm_evolution_character_manipulation/" target="_blank">LLMs are getting better at character-level text manipulation</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 19:39:14 UTC</span>
+            </div>
+            
+            <p class="item-description">42 points, by curioussquirrel</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/iron-series-begins-new-season-with-round-one-coolangatta-gold/105806780" target="_blank">Australia's best begin Iron Series with a re-imagined Gold Coast classic</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 18:58:35 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-14/rugby-world-cup-women-england-wallaroos/105874404" target="_blank">Australia must learn from England ahead of hosting 2029 Women's Rugby World Cup</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 18:58:35 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://strudel.cc" target="_blank">Strudel REPL – a music live coding environment living in the browser</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 18:37:34 UTC</span>
+            </div>
+            
+            <p class="item-description">90 points, by birdculture</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5s4s7/sora_2_and_chatgpt_are_consuming_so_much_power/" target="_blank">Sora 2 and ChatGPT are consuming so much power that OpenAI just did another 10 gigawatt deal</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 18:36:19 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://arxiv.org/abs/2510.09272" target="_blank">Modern iOS Security Features – A Deep Dive into SPTM, TXM, and Exclaves</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 18:23:15 UTC</span>
+            </div>
+            
+            <p class="item-description">108 points, by todsacerdoti</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5qt2j/britain_issues_first_online_safety_fine_to_us/" target="_blank">Britain issues first online safety fine to US website 4chan</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 17:49:26 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5qmkp/warner_bros_discovery_rejected_paramount_skydance/" target="_blank">Warner Bros. Discovery Rejected Paramount Skydance Acquisition Offer of $20 per Share as Too Low</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 17:43:02 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5pyz4/layoffs_a_coding_error_chaos_white_house_admin/" target="_blank">Layoffs, a “coding error,” chaos: White House admin ravages the health dept. | Reports suggest the hardest hit is the CDC, which is already struggling to function.</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 17:19:42 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5oxij/whats_that_the_brutally_honest_whatsapp_web/" target="_blank">What's That!? - the brutally honest WhatsApp Web analyzer (open-source)</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 16:43:08 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5o7la/unlimited_discord_soundboard/" target="_blank">Unlimited Discord soundboard</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 16:17:17 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5n5gb/no_target_and_walmart_are_not_removing_xbox/" target="_blank">No, Target and Walmart are not removing Xbox products — as Xbox misinformation reaches new levels</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 15:38:52 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://github.com/karpathy/nanochat" target="_blank">NanoChat – The best ChatGPT that $100 can buy</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 15:22:47 UTC</span>
+            </div>
+            
+            <p class="item-description">848 points, by huseyinkeles</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5mdxf/software_update_bricks_some_jeep_4xe_hybrids_over/" target="_blank">Software update bricks some Jeep 4xe hybrids over the weekend | Jeep has pulled the update; owners are advised to ignore it if it already downloaded.</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 15:11:17 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://unplannedobsolescence.com/blog/what-dynamic-typing-is-for/" target="_blank">What Dynamic Typing Is For</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 15:07:52 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5l3ig/microsoft_lets_bosses_spot_teams_that_are_dodging/" target="_blank">Microsoft lets bosses spot teams that are dodging Copilot - Viva Insights turns AI guzzling into a leaderboard</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 14:23:11 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5l1c6/german_state_replaces_microsoft_exchange_and/" target="_blank">German state replaces Microsoft Exchange and Outlook with open-source email</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 14:20:57 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://herman.bearblog.dev/being-present/" target="_blank">Smartphones and being present</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 14:20:33 UTC</span>
+            </div>
+            
+            <p class="item-description">190 points, by articsputnik</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.datagubbe.se/crt2/" target="_blank">The Peach meme: On CRTs, pixels and signal quality (again)</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 13:25:44 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://steveblank.com/2025/10/13/no-science-no-startups-the-unseen-engine-were-switching-off/" target="_blank">No Science, No Startups: The Innovation Engine We're Switching Off</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 13:02:20 UTC</span>
+            </div>
+            
+            <p class="item-description">258 points, by chmaynard</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://sqliteonline.com/" target="_blank">Show HN: SQLite Online – 11 years of solo development, 11K daily users</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 12:46:52 UTC</span>
+            </div>
+            
+            <p class="item-description">338 points, by sqliteonline</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5ie9w/grammarllm_selfhosted_grammar_correction_with_4gb/" target="_blank">GrammarLLM: Self-hosted grammar correction with 4GB local model & Docker</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 12:31:35 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5i1ak/california_will_stop_using_coal_as_a_power_source/" target="_blank">California Will Stop Using Coal as a Power Source Next Month</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 12:15:01 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://smallcultfollowing.com/babysteps/blog/2025/10/13/ergonomic-explicit-handles/" target="_blank">We need (at least) ergonomic, explicit handles</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 12:09:59 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5hu2h/pankha_selfhosted_centralized_fan_control_center/" target="_blank">Pankha SelfHosted Centralized Fan Control Center.</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 12:05:08 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://dorotac.eu/posts/fosswon/" target="_blank">Free Software hasn't won</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 11:45:00 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://buttondown.com/justincormack/archive/ignore-previous-directions-8-devopsdays/" target="_blank">Why did containers happen? A view from ten years in the trenches by Docker's former CTO Justin Cormack</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 11:36:36 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5glkn/an_update_from_changedetectionio_your_selfhosted/" target="_blank">An update from changedetection.io - your self-hosted web page change detection and notification engine</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 11:00:17 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5gdxe/more_hierarchical_alternatives_to_paperlessngx/" target="_blank">More Hierarchical Alternatives to Paperless-NGX?</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 10:48:12 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://frantic.im/remix-3/" target="_blank">Thoughts on Remix 3</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 10:28:47 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5fzfg/uk_communications_regulator_confirms_20000_4chan/" target="_blank">UK communications regulator confirms £20,000 4Chan fine</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 10:24:49 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://geekyschmidt.com/post/sailfishos-sept25/" target="_blank">Revisiting SailfishOS</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 10:20:43 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.cnbc.com/2025/10/13/dutch-government-takes-control-of-chinese-owned-chipmaker-nexperia.html" target="_blank">Dutch government takes control of Chinese-owned chipmaker Nexperia</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-13 10:03:11 UTC</span>
+            </div>
+            
+            <p class="item-description">293 points, by piskov</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5f2g5/anytype_bundle_selfhosted_bundle_server_for_easy/" target="_blank">Anytype Bundle: self-hosted bundle server for easy setup</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 09:29:02 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://smolbsd.org" target="_blank">smolBSD — build your own minimal BSD system</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 09:25:26 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://strudel.cc" target="_blank">Strudel REPL - a music live coding environment living in the browser</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 08:17:29 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5dr70/auribook_20_for_audiobookshelf_is_here_remote/" target="_blank">Auribook 2.0 for Audiobookshelf is Here! Remote Progress Sync, Sleep Timer and a Huge Overhaul!</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 08:03:52 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5djs7/are_your_contactdomain_mails_often_spammed/" target="_blank">Are your contact@<domain> mails often spammed ?</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 07:50:40 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.legitsecurity.com/blog/camoleak-critical-github-copilot-vulnerability-leaks-private-source-code" target="_blank">Critical GitHub Copilot Vulnerability Leaks Private Source Code</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 06:32:41 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o5borw/bentopdf_is_a_self_hostable_pdf_toolkit/" target="_blank">BentoPDF is a self hostable PDF Toolkit</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 05:54:57 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-13/constellation-cup-australia-new-zealand-diamonds-silver-ferns/105885876" target="_blank">Diamonds mindful they need to lift against Silver Ferns</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 05:52:53 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.pinaraf.info/2025/10/jit-so-you-want-to-be-faster-than-an-interpreter-on-modern-cpus/" target="_blank">JIT: so you want to be faster than an interpreter on modern CPUs…</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 05:51:08 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5bj9m/the_real_ai_risk_is_meh_technology_that_takes/" target="_blank">The Real AI Risk is ‘Meh’ Technology That Takes Jobs and Annoys Us All</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 05:45:43 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-13/nrlw-jesse-southwell-signs-with-broncos-after-leaving-knights/105885604" target="_blank">Southwell signs with Broncos amid fears of lopsided NRLW competition</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-13 04:55:03 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o5akik/dutch_government_takes_control_of_chineseowned/" target="_blank">Dutch government takes control of Chinese-owned chipmaker Nexperia</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 04:49:41 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://github.com/chili-chips-ba/wireguard-fpga" target="_blank">Wireguard FPGA</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 04:06:29 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o58ro0/tailscale_or_cloudflare_tunnel_for_plex/" target="_blank">Tailscale or Cloudflare Tunnel for Plex?</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 03:15:36 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o58loc/andrea_bartz_was_disturbed_to_learn_that_her/" target="_blank">Andrea Bartz was disturbed to learn that her books had been used to train A.I. chatbots. So she sued, and helped win the largest copyright settlement in history.</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 03:07:27 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/selfhosted/comments/1o56qf8/selfhosted_steam_for_drmfree_games/" target="_blank">Self-hosted steam for DRM-free games</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/selfhosted]</span> 
+                <span>Posted: 2025-10-13 01:36:28 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://old.reddit.com/r/technology/comments/1o568ug/most_people_rarely_use_ai_and_dark_personality/" target="_blank">Most people rarely use AI, and dark personality traits predict who uses it more | Study finds AI browsing makes up less than 1% of online activity</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[r/technology]</span> 
+                <span>Posted: 2025-10-13 01:12:11 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://blog.cr.yp.to/20251004-weakened.html" target="_blank">NSA and IETF: Can an attacker simply purchase standardization of weakened cryptography?</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Lobsters]</span> 
+                <span>Posted: 2025-10-13 00:07:56 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-13/pat-cummins-unlikely-to-play-first-ashes-test/105883832" target="_blank">Cummins 'probably unlikely' to play in first Ashes Test</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-12 23:43:00 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-13/minjee-lee-finishes-third-in-epic-lpga-shanghai/105883722" target="_blank">Minjee Lee finishes third in epic LPGA Shanghai finale</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-12 22:02:44 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-13/afl-trade-period-day-six-live-updates-merrett-curnow-petracca/105883736" target="_blank">Merrett deadlock continues as major AFL trades now racing the clock</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-12 21:29:11 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-13/jelenadokic-says-abusive-dad-showed-no-remorse/105849988" target="_blank">Jelena Dokic tried to reconcile with her dad. His response shocked her</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-12 19:29:48 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.pinaraf.info/2025/10/jit-so-you-want-to-be-faster-than-an-interpreter-on-modern-cpus/" target="_blank">JIT: So you want to be faster than an interpreter on modern CPUs</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-12 19:08:41 UTC</span>
+            </div>
+            
+            <p class="item-description">83 points, by pinaraf</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.walmart.com/ip/SANTA-SMAGICAL-PHONE/16364964771" target="_blank">Show HN: AI Toy I worked on is in stores</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-12 14:15:21 UTC</span>
+            </div>
+            
+            <p class="item-description">57 points, by Sean-Der</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://www.abc.net.au/news/2025-10-12/australia-beats-india-by-three-wickets-in-womens-world-cup/105882054" target="_blank">Glorious Healy ton and Perry heroics power Australia to world-record win</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[ABC]</span> 
+                <span>Posted: 2025-10-12 08:28:07 UTC</span>
+            </div>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://phys.org/news/2025-10-device-based-optical-thermodynamics-route.html" target="_blank">First device based on 'optical thermodynamics' can route light without switches</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-09 00:54:00 UTC</span>
+            </div>
+            
+            <p class="item-description">111 points, by rbanffy</p>
+            
+        </div>
+        
+        <div class="item">
+            <div class="item-header">
+                <a href="https://dayvster.com/blog/accidentally-made-a-zig-dotenv-parser/" target="_blank">Accidentally Made a Zig Dotenv Parser</a>
+            </div>
+            <div class="item-meta">
+                <span class="source">[Hacker News]</span> 
+                <span>Posted: 2025-10-08 17:39:00 UTC</span>
+            </div>
+            
+            <p class="item-description">20 points, by ibobev</p>
+            
+        </div>
+        
+
+        <div class="footer">
+            Generated by Simple News Aggregator Site on 2025-10-14 01:42:41 UTC
+        </div>
+    </div>
+</body>
+</html>
