@@ -8,6 +8,8 @@ from operator import itemgetter
 import html
 from bs4 import BeautifulSoup
 import argparse
+import os
+from dotenv import load_dotenv
 
 # --- 1. Data Retrieval Functions ---
 
@@ -99,31 +101,35 @@ def fetch_rss_feed(url, source_name, limit=15):
         
     return feed_data
 
+load_dotenv()
+
 def aggregate_and_render(output_file='index.html'):
-    """Combines all feeds, sorts, and generates the HTML output."""
+    # Combines all feeds, sorts, and generates the HTML output."""
+    article_limit = int(os.getenv('ARTICLE_LIMIT', 15))
     all_news = []
 
     # Get data from all sources
-    all_news.extend(fetch_hacker_news(limit=15))
-    all_news.extend(fetch_rss_feed('https://lobste.rs/rss', 'Lobsters', limit=15))
-    # all_news.extend(fetch_rss_feed('https://mastodon.au/tags/news.rss', 'Mastodon', limit=15))
-    all_news.extend(fetch_rss_feed('https://www.abc.net.au/news/feed/2942460/rss.xml', 'ABC', limit=15))
-    all_news.extend(fetch_rss_feed('https://old.reddit.com/r/selfhosted/top/.rss?t=day', 'r/selfhosted', limit=15))
-    all_news.extend(fetch_rss_feed('https://old.reddit.com/r/technology/top/.rss?t=day', 'r/technology', limit=15))
+    all_news.extend(fetch_hacker_news(limit=article_limit))
+
+    # Dynamically find all *_RSS variables in the environment
+    for key, url in os.environ.items():
+        if key.endswith('_RSS') and url:
+            source_name = key.replace('_RSS', '').replace('_', ' ').title()
+            all_news.extend(fetch_rss_feed(url, source_name, limit=article_limit))
 
     # Sort all entries by time_posted, descending (newest first)
     all_news.sort(key=itemgetter('time_posted'), reverse=True)
 
-    # Setup Jinja2 environment and load template
-    # Note: Jinja2 looks for the template relative to the script's execution, which is fine here.
-    env = Environment(loader=FileSystemLoader('.')) 
+    # Get template directory from environment or default to current directory
+    template_dir = os.getenv('TEMPLATE_DIR', os.getcwd())
+    env = Environment(loader=FileSystemLoader(template_dir))
     template = env.get_template('template.html')
 
     # Render the template with the combined data
     html_output = template.render(
         news_items=all_news,
-        generated_at=datetime.now(tz=ZoneInfo("Australia/Sydney")
-    ))
+        generated_at=datetime.now(tz=ZoneInfo("Australia/Sydney"))
+    )
 
     # Save the HTML file to the specified location
     with open(output_file, 'w', encoding='utf-8') as f:
