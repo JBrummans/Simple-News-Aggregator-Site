@@ -104,8 +104,18 @@ def fetch_rss_feed(url, source_name, limit=15):
 load_dotenv()
 
 def aggregate_and_render(output_file='index.html'):
-    # Combines all feeds, sorts, and generates the HTML output."""
+    # Combines all feeds, sorts, and generates the HTML output.
     article_limit = int(os.getenv('ARTICLE_LIMIT', 15))
+    total_article_limit = int(os.getenv('TOTAL_ARTICLE_LIMIT', 0))  # 0 means unlimited
+
+    # Timezone for generated_at
+    tz_name = os.getenv('TIMEZONE', 'Australia/Sydney')
+    try:
+        display_tz = ZoneInfo(tz_name)
+    except Exception:
+        print(f"Invalid TIMEZONE '{tz_name}', defaulting to UTC.")
+        display_tz = timezone.utc
+
     all_news = []
 
     # Get data from all sources
@@ -120,6 +130,10 @@ def aggregate_and_render(output_file='index.html'):
     # Sort all entries by time_posted, descending (newest first)
     all_news.sort(key=itemgetter('time_posted'), reverse=True)
 
+    # Apply total article limit if set
+    if total_article_limit > 0:
+        all_news = all_news[:total_article_limit]
+
     # Get template directory from environment or default to current directory
     template_dir = os.getenv('TEMPLATE_DIR', os.getcwd())
     env = Environment(loader=FileSystemLoader(template_dir))
@@ -128,7 +142,7 @@ def aggregate_and_render(output_file='index.html'):
     # Render the template with the combined data
     html_output = template.render(
         news_items=all_news,
-        generated_at=datetime.now(tz=ZoneInfo("Australia/Sydney"))
+        generated_at=datetime.now(tz=display_tz)
     )
 
     # Save the HTML file to the specified location
